@@ -1,4 +1,4 @@
-class Solution {
+class DuplicateArray {
 
     public int removeDuplicates(int[] arr) {
 
