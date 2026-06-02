@@ -1,4 +1,4 @@
-class Solution {
+class MaxAvgSubarray {
 
     public double findMaxAverage(int[] nums, int k) {
 
