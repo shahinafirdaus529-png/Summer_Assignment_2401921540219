@@ -1,31 +1,24 @@
-import java.util.*;
-
 class Solution {
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    List<Integer> result = new ArrayList<>();
 
-        List<List<Integer>> result =
-                new ArrayList<>();
+    public List<Integer> inorderTraversal(TreeNode root) {
 
-        if (root == null) {
-            return result;
+        traverse(root);
+        return result;
+    }
+
+    private void traverse(TreeNode node) {
+
+        if (node == null) {
+            return;
         }
 
-        Queue<TreeNode> queue =
-                new LinkedList<>();
-
-        queue.offer(root);
-
-        while (!queue.isEmpty()) {
-
-            int levelSize =
-                    queue.size();
-
-            List<Integer> level =
-                    new ArrayList<>();
-
-            for (int i = 0; i < levelSize; i++) {
-
+        traverse(node.left);
+        result.add(node.val);
+        traverse(node.right);
+    }
+}
                 TreeNode current =
                         queue.poll();
 
